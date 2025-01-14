@@ -1,0 +1,128 @@
+#hidden {
+  display: none;
+}
+:root {
+  --black-color: #000000;
+  --white-color: #fff;
+  --input-bg: #f0f0f0;
+  --bg-1: #f2f0f1;
+  --product-bg: #f0eeed;
+  --product-bg: #f0eeed;
+  --gray: gray;
+
+  --font-int-M: integral-Medium;
+  --font-sat-M: Satoshi-Medium;
+  --font-sat-L: Satoshi-Light;
+
+  --section-padd: 0px 120px;
+}
+section {
+  display: flex;
+  justify-content: center;
+  align-items: start;
+  gap: 10px;
+  width: 95%;
+}
+section aside {
+  border-radius: 15px;
+  width: 20%;
+  display: grid;
+  gap: 10px;
+  padding: 20px 20px;
+  position: sticky;
+  top: 0px;
+}
+section aside h2.title {
+  font-size: 1rem;
+}
+section aside .links h2.title {
+  margin-bottom: 10px;
+  margin-top: 20px;
+}
+section aside .links {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+section aside .links button {
+  text-transform: capitalize;
+}
+section aside .link-4 .sizes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+section aside .link-4 .sizes button {
+  background-color: var(--input-bg);
+  border-radius: 100px;
+  padding: 8px 20px;
+  white-space: nowrap;
+}
+section aside .link-3 .colors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+section aside .link-3 .colors input {
+  appearance: none;
+  border-radius: 100%;
+  width: 24px;
+  height: 24px;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+section aside .link-3 .colors input:checked::before {
+  content: "";
+  background-color: transparent;
+  border-radius: 100%;
+  border: 2px solid white;
+  box-shadow: 0 0 20px black;
+  width: 60%;
+  height: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+section aside .link-2 .min-max {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  font-size: 0.8rem;
+}
+section aside .link-2 .range-container {
+  gap: 5px;
+}
+section aside .link-2 .range-container input {
+  appearance: none;
+  height: 6px;
+  width: 100%;
+  background-color: var(--input-bg);
+  border-radius: 100px;
+  width: 50%;
+}
+section aside .link-2 .range-container input::-webkit-slider-thumb {
+  appearance: none;
+  background-color: var(--black-color);
+  border-radius: 100%;
+  width: 14px;
+  height: 14px;
+  cursor: pointer;
+}
+section aside .link-2 .range-container {
+  display: flex;
+}
+
+section main {
+  display: flex;
+  flex-wrap: wrap;
+  width: calc(100% - 20%);
+}
+
+section aside .apply {
+  margin-top: 40px;
+  padding-block: 8px;
+  font-size: 12px;
+}

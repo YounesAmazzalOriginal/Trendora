@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Trendora - Category</title>
+    <!-- Css -->
+    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/shared.css" />
+    <!-- Js -->
+    <script src="js/category.js"></script>
+    <!-- Font Awesome CDN -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+      rel="stylesheet"
+    />
+    <!-- Favicon -->
+    <link
+      rel="icon"
+      href="Assets/Images/favicon-32x32-lightMode.png"
+      type="image/x-icon"
+    />
+  </head>
+  <body>
+    <nav>
+      <a href="#" class="logo">trendora</a>
+      <ul>
+        <li class="active"><a href="#">home</a></li>
+        <li><a href="#">category</a></li>
+        <li><a href="#">search</a></li>
+        <li class="nav-search">
+          <i class="fa-solid fa-magnifying-glass"></i>
+          <input type="text" placeholder="Search for product..." />
+        </li>
+      </ul>
+      <button class="nav-cart">
+        <i class="fa-solid fa-cart-shopping"></i>
+        <span class="nav-cart-count">0</span>
+      </button>
+    </nav>
+    <section>
+      <aside>
+        <h2 class="title">Filter</h2>
+        <div class="links link-1">
+          <button><p>t-shirt</p></button>
+          <button><p>shorts</p></button>
+          <button><p>shirts</p></button>
+          <button><p>hoodie</p></button>
+          <button><p>jeans</p></button>
+          <button><p>all</p></button>
+        </div>
+        <div class="links link-2">
+          <h2 class="title">Price</h2>
+          <div class="min-max">
+            <p>$ <span class="minSpan">0</span></p>
+            <p>$ <span class="maxSpan">1000</span></p>
+          </div>
+          <div class="range-container">
+            <input
+              oninput="rangePrice()"
+              type="range"
+              min="0"
+              max="1000"
+              value="0"
+              class="minRange"
+            />
+            <input
+              oninput="rangePrice()"
+              type="range"
+              min="0"
+              max="1000"
+              value="1000"
+              class="maxRange"
+            />
+          </div>
+        </div>
+        <div class="links link-3">
+          <h2 class="title">Color</h2>
+          <div class="colors">
+            <!-- <input type="radio" />
+            <input type="radio" />
+            <input type="radio" />
+            <input type="radio" />
+            <input type="radio" />
+            <input type="radio" /> -->
+          </div>
+        </div>
+        <div class="links link-4">
+          <h2 class="title">Size</h2>
+          <div class="sizes">
+            <button>xx-small</button>
+            <button>s-small</button>
+            <button>small</button>
+            <button>medium</button>
+            <button>large</button>
+            <button>x-large</button>
+            <button>xx-large</button>
+            <button>3x-large</button>
+            <button>4x-large</button>
+            <button>all</button>
+          </div>
+        </div>
+        <div class="links link-5">
+          <h2 class="title">Dress Style</h2>
+          <button><p>casual</p></button>
+          <button><p>formal</p></button>
+          <button><p>party</p></button>
+          <button><p>gym</p></button>
+          <button><p>all</p></button>
+        </div>
+        <button class="apply btn-1">Apply</button>
+      </aside>
+      <main>
+        <!--  -->
+      </main>
+    </section>
+    <!-- Contact -->
+    <section class="contact">
+      <h1>star up to date about our latest offers</h1>
+      <div>
+        <div class="input">
+          <i class="fa-regular fa-envelope"></i>
+          <input type="text" placeholder="Enter you email address" />
+        </div>
+        <button class="btn-2">Subscribe to Newsletter</button>
+      </div>
+    </section>
+    <!-- Footer -->
+    <footer>
+      <div class="text">
+        <h1>trendora</h1>
+        <p>
+          We have clothes that suits youe style and which you're proud to wear,
+          From women to men.
+        </p>
+        <div>
+          <a href="https://wa.me/212635303129">
+            <button>
+              <i class="fa-brands fa-whatsapp"></i>
+            </button>
+          </a>
+          <a href="https://www.linkedin.com/in/younes-amazzal-3152042b0/">
+            <button>
+              <i class="fa-brands fa-linkedin-in"></i>
+            </button>
+          </a>
+          <a href="https://www.instagram.com/amzprod2">
+            <button>
+              <i class="fa-brands fa-instagram"></i>
+            </button>
+          </a>
+          <a href="https://github.com/YounesAmazzalOriginal">
+            <button>
+              <i class="fa-brands fa-github"></i>
+            </button>
+          </a>
+        </div>
+      </div>
+      <ul>
+        <h2>company</h2>
+        <li><a href="#">about</a></li>
+        <li><a href="#">features</a></li>
+        <li><a href="#">works</a></li>
+        <li><a href="#">career</a></li>
+      </ul>
+      <ul>
+        <h2>help</h2>
+        <li><a href="#">customer support</a></li>
+        <li><a href="#">delivery details</a></li>
+        <li><a href="#">terms & conditions</a></li>
+        <li><a href="#">privacy policy</a></li>
+      </ul>
+      <ul>
+        <h2>faq</h2>
+        <li><a href="#">account</a></li>
+        <li><a href="#">manage deliveries</a></li>
+        <li><a href="#">orders</a></li>
+        <li><a href="#">payments</a></li>
+      </ul>
+      <ul>
+        <h2>resourses</h2>
+        <li><a href="#">free eBook</a></li>
+        <li><a href="#">development tutorial</a></li>
+        <li><a href="#">how to - blog</a></li>
+        <li><a href="#">youtube playlist</a></li>
+      </ul>
+    </footer>
+    <!-- Copyright -->
+    <div class="copyright">
+      <p>Website Create By Younes AMAZZAL</p>
+    </div>
+  </body>
+</html>
