@@ -45,6 +45,9 @@ section aside .links {
   align-items: start;
   gap: 10px;
 }
+section aside .links button.active {
+  text-decoration: underline;
+}
 section aside .links button {
   text-transform: capitalize;
 }
@@ -58,6 +61,14 @@ section aside .link-4 .sizes button {
   border-radius: 100px;
   padding: 8px 20px;
   white-space: nowrap;
+  transition: filter 0.4s;
+}
+section aside .link-4 .sizes button:hover {
+  rotate: 0deg;
+  filter: invert();
+}
+section aside .link-4 .sizes button.active {
+  filter: invert();
 }
 section aside .link-3 .colors {
   display: flex;
