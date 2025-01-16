@@ -109,6 +109,10 @@ nav {
   align-items: center;
   justify-content: space-evenly;
   width: 100%;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background-color: var(--white-color);
 }
 nav a.logo {
   font-family: var(--font-int-M);
@@ -208,6 +212,9 @@ nav .nav-cart .nav-cart-count {
   align-items: center;
   justify-content: space-around;
   padding-block: 20px;
+
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .contact h1 {
   color: white;
@@ -301,7 +308,6 @@ footer ul li {
 
 /* Card */
 .card {
-  /* background-color: orange; */
   border-radius: 10px;
   padding: 5px;
   padding-bottom: 10px;
@@ -339,6 +345,9 @@ footer ul li {
   text-transform: capitalize;
   font-family: var(--font-sat-M);
 }
+.card p.descreption {
+  display: none;
+}
 .card .card-reviews-stars {
   display: flex;
   justify-content: space-between;
@@ -359,6 +368,7 @@ footer ul li {
 }
 .card .card-reviews-stars p span {
   font-family: var(--font-sat-M);
+  color: var(--black-color);
 }
 .card .price-container {
   display: flex;

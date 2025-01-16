@@ -1,3 +1,137 @@
+// let productData = [
+//   {
+//     image: "orange-tshirt-1.png",
+//     title: "Orange T-shirt with Details",
+//     stars: 4.5,
+//     currentPrice: 240,
+//     oldPrice: 260,
+//     color: "Orange",
+//     size: ["S", "M", "L", "XL"],
+//     type: "T-shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "blue-jean-shorts.png",
+//     title: "Stylish Blue Jeans",
+//     stars: 4.8,
+//     currentPrice: 300,
+//     oldPrice: 350,
+//     color: "Blue",
+//     size: ["M", "L", "XL"],
+//     type: "Shorts",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "blue-tshirt-1.png",
+//     title: "Classic Blue T-shirt",
+//     stars: 4.3,
+//     currentPrice: 200,
+//     oldPrice: 230,
+//     color: "Blue",
+//     size: ["S", "M", "L"],
+//     type: "T-shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "brown-tshirt-1.png",
+//     title: "Brown T-shirt with Pockets",
+//     stars: 4.6,
+//     currentPrice: 220,
+//     oldPrice: 250,
+//     color: "Brown",
+//     size: ["M", "L", "XL"],
+//     type: "T-shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "orange-tshirt-2.png",
+//     title: "Bright Orange T-shirt",
+//     stars: 4.2,
+//     currentPrice: 180,
+//     oldPrice: 200,
+//     color: "Orange",
+//     size: ["S", "M", "L"],
+//     type: "T-shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "pants-image-1.png",
+//     title: "Comfort Fit Pants",
+//     stars: 4.7,
+//     currentPrice: 400,
+//     oldPrice: 450,
+//     color: "Black",
+//     size: ["M", "L", "XL"],
+//     type: "Pants",
+//     dressStyle: "Formal",
+//   },
+//   {
+//     image: "pants-image-2-jean.png",
+//     title: "Regular Fit Jeans",
+//     stars: 4.4,
+//     currentPrice: 350,
+//     oldPrice: 380,
+//     color: "Blue",
+//     size: ["M", "L", "XL"],
+//     type: "Pants",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "pink-tshirt-1.png",
+//     title: "Light Pink T-shirt",
+//     stars: 4.1,
+//     currentPrice: 190,
+//     oldPrice: 210,
+//     color: "Pink",
+//     size: ["S", "M", "L"],
+//     type: "T-shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "plaid-shirt-1.png",
+//     title: "Red Plaid Shirt",
+//     stars: 4.5,
+//     currentPrice: 280,
+//     oldPrice: 320,
+//     color: "Red",
+//     size: ["M", "L", "XL"],
+//     type: "Shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "plaid-shirt-2.png",
+//     title: "Green Plaid Shirt",
+//     stars: 4.3,
+//     currentPrice: 260,
+//     oldPrice: 300,
+//     color: "Green",
+//     size: ["S", "M", "L"],
+//     type: "Shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "white-tshirt-1.png",
+//     title: "White Cotton T-shirt",
+//     stars: 4.6,
+//     currentPrice: 230,
+//     oldPrice: 260,
+//     color: "White",
+//     size: ["S", "M", "L"],
+//     type: "T-shirt",
+//     dressStyle: "Casual",
+//   },
+//   {
+//     image: "white-tshirt-2.png",
+//     title: "Plain White T-shirt",
+//     stars: 4.2,
+//     currentPrice: 220,
+//     oldPrice: 250,
+//     color: "White",
+//     size: ["M", "L", "XL"],
+//     type: "T-shirt",
+//     dressStyle: "Casual",
+//   },
+// ];
 let productData = [
   {
     image: "orange-tshirt-1.png",
@@ -9,6 +143,8 @@ let productData = [
     size: ["S", "M", "L", "XL"],
     type: "T-shirt",
     dressStyle: "Casual",
+    description:
+      "A comfortable orange T-shirt with detailed stitching and a soft fabric, perfect for casual outings.",
   },
   {
     image: "blue-jean-shorts.png",
@@ -20,6 +156,8 @@ let productData = [
     size: ["M", "L", "XL"],
     type: "Shorts",
     dressStyle: "Casual",
+    description:
+      "These stylish blue jeans offer a relaxed fit and are designed for both comfort and style.",
   },
   {
     image: "blue-tshirt-1.png",
@@ -31,6 +169,8 @@ let productData = [
     size: ["S", "M", "L"],
     type: "T-shirt",
     dressStyle: "Casual",
+    description:
+      "A classic blue T-shirt made from soft cotton fabric, perfect for everyday wear.",
   },
   {
     image: "brown-tshirt-1.png",
@@ -42,6 +182,8 @@ let productData = [
     size: ["M", "L", "XL"],
     type: "T-shirt",
     dressStyle: "Casual",
+    description:
+      "This brown T-shirt features convenient pockets and a comfortable fit, ideal for casual wear.",
   },
   {
     image: "orange-tshirt-2.png",
@@ -53,6 +195,8 @@ let productData = [
     size: ["S", "M", "L"],
     type: "T-shirt",
     dressStyle: "Casual",
+    description:
+      "A bright orange T-shirt that adds a pop of color to your wardrobe, perfect for sunny days.",
   },
   {
     image: "pants-image-1.png",
@@ -64,6 +208,8 @@ let productData = [
     size: ["M", "L", "XL"],
     type: "Pants",
     dressStyle: "Formal",
+    description:
+      "These black comfort fit pants offer a sleek look with a comfortable fit, great for formal occasions.",
   },
   {
     image: "pants-image-2-jean.png",
@@ -75,6 +221,8 @@ let productData = [
     size: ["M", "L", "XL"],
     type: "Pants",
     dressStyle: "Casual",
+    description:
+      "Regular fit blue jeans that provide comfort and a timeless style for any casual event.",
   },
   {
     image: "pink-tshirt-1.png",
@@ -86,6 +234,8 @@ let productData = [
     size: ["S", "M", "L"],
     type: "T-shirt",
     dressStyle: "Casual",
+    description:
+      "A light pink T-shirt with a soft feel, perfect for a relaxed and feminine look.",
   },
   {
     image: "plaid-shirt-1.png",
@@ -97,6 +247,8 @@ let productData = [
     size: ["M", "L", "XL"],
     type: "Shirt",
     dressStyle: "Casual",
+    description:
+      "This red plaid shirt is the perfect addition to your casual wardrobe, offering a classic and trendy style.",
   },
   {
     image: "plaid-shirt-2.png",
@@ -108,6 +260,8 @@ let productData = [
     size: ["S", "M", "L"],
     type: "Shirt",
     dressStyle: "Casual",
+    description:
+      "A green plaid shirt that adds a bit of personality to your casual outfits, made from soft cotton.",
   },
   {
     image: "white-tshirt-1.png",
@@ -119,6 +273,8 @@ let productData = [
     size: ["S", "M", "L"],
     type: "T-shirt",
     dressStyle: "Casual",
+    description:
+      "A simple and timeless white cotton T-shirt that provides comfort and versatility.",
   },
   {
     image: "white-tshirt-2.png",
@@ -130,131 +286,10 @@ let productData = [
     size: ["M", "L", "XL"],
     type: "T-shirt",
     dressStyle: "Casual",
+    description:
+      "A plain white T-shirt with a clean design, perfect for layering or wearing on its own.",
   },
 ];
-
-// let productData = [
-//   {
-//     image: "orange-tshirt-1.png",
-//     title: "Orange T-shirt with Details",
-//     stars: 4.5,
-//     currentPrice: 240,
-//     oldPrice: 260,
-//     color: "Orange",
-//     size: ["S", "M", "L", "XL"],
-//     type: "T-shirt",
-//   },
-//   {
-//     image: "blue-jean-shorts.png",
-//     title: "Stylish Blue Jeans",
-//     stars: 4.8,
-//     currentPrice: 300,
-//     oldPrice: 350,
-//     color: "Blue",
-//     size: ["M", "L", "XL"],
-//     type: "Shorts",
-//   },
-//   {
-//     image: "blue-tshirt-1.png",
-//     title: "Classic Blue T-shirt",
-//     stars: 4.3,
-//     currentPrice: 200,
-//     oldPrice: 230,
-//     color: "Blue",
-//     size: ["S", "M", "L"],
-//     type: "T-shirt",
-//   },
-//   {
-//     image: "brown-tshirt-1.png",
-//     title: "Brown T-shirt with Pockets",
-//     stars: 4.6,
-//     currentPrice: 220,
-//     oldPrice: 250,
-//     color: "Brown",
-//     size: ["M", "L", "XL"],
-//     type: "T-shirt",
-//   },
-//   {
-//     image: "orange-tshirt-2.png",
-//     title: "Bright Orange T-shirt",
-//     stars: 4.2,
-//     currentPrice: 180,
-//     oldPrice: 200,
-//     color: "Orange",
-//     size: ["S", "M", "L"],
-//     type: "T-shirt",
-//   },
-//   {
-//     image: "pants-image-1.png",
-//     title: "Comfort Fit Pants",
-//     stars: 4.7,
-//     currentPrice: 400,
-//     oldPrice: 450,
-//     color: "Black",
-//     size: ["M", "L", "XL"],
-//     type: "Pants",
-//   },
-//   {
-//     image: "pants-image-2-jean.png",
-//     title: "Regular Fit Jeans",
-//     stars: 4.4,
-//     currentPrice: 350,
-//     oldPrice: 380,
-//     color: "Blue",
-//     size: ["M", "L", "XL"],
-//     type: "Pants",
-//   },
-//   {
-//     image: "pink-tshirt-1.png",
-//     title: "Light Pink T-shirt",
-//     stars: 4.1,
-//     currentPrice: 190,
-//     oldPrice: 210,
-//     color: "Pink",
-//     size: ["S", "M", "L"],
-//     type: "T-shirt",
-//   },
-//   {
-//     image: "plaid-shirt-1.png",
-//     title: "Red Plaid Shirt",
-//     stars: 4.5,
-//     currentPrice: 280,
-//     oldPrice: 320,
-//     color: "Red",
-//     size: ["M", "L", "XL"],
-//     type: "Shirt",
-//   },
-//   {
-//     image: "plaid-shirt-2.png",
-//     title: "Green Plaid Shirt",
-//     stars: 4.3,
-//     currentPrice: 260,
-//     oldPrice: 300,
-//     color: "Green",
-//     size: ["S", "M", "L"],
-//     type: "Shirt",
-//   },
-//   {
-//     image: "white-tshirt-1.png",
-//     title: "White Cotton T-shirt",
-//     stars: 4.6,
-//     currentPrice: 230,
-//     oldPrice: 260,
-//     color: "White",
-//     size: ["S", "M", "L"],
-//     type: "T-shirt",
-//   },
-//   {
-//     image: "white-tshirt-2.png",
-//     title: "Plain White T-shirt",
-//     stars: 4.2,
-//     currentPrice: 220,
-//     oldPrice: 250,
-//     color: "White",
-//     size: ["M", "L", "XL"],
-//     type: "T-shirt",
-//   },
-// ];
 
 productData.forEach((product) => {
   product.discount = parseFloat(
@@ -264,32 +299,6 @@ productData.forEach((product) => {
 
 localStorage.setItem("productData", JSON.stringify(productData));
 
-function product(image, title, stars, currentPrice, oldPrice, discount) {
-  return `
-      <a href="">
-        <div class="card">
-          <div class="card-image">
-            <img src="Assets/Images/${image}" alt="" />
-          </div>
-          <h4>${title}</h4>
-          <div class="card-reviews-stars">
-            <div class="card-stars">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star-half-stroke"></i>
-            </div>
-            <p><span class="card-point">${stars}</span>/5</p>
-          </div>
-          <div class="price-container">
-            <h2 class="current-price">$<span>${currentPrice}</span></h2>
-            <h2 class="old-price">$<span>${oldPrice}</span></h2>
-            <h2 class="discount">-<span>${discount}</span>%</h2>
-          </div>
-        </div>
-        </a>`;
-}
 document.addEventListener("DOMContentLoaded", () => {
   var ArrivalCards = document.querySelector(".new-arrival .cards");
   var lowPriceCards = document.querySelector(".low-price .cards");
@@ -298,6 +307,7 @@ document.addEventListener("DOMContentLoaded", () => {
     ArrivalCards.innerHTML += product(
       productData[i].image,
       productData[i].title,
+      productData[i].description,
       productData[i].stars,
       productData[i].currentPrice,
       productData[i].oldPrice,
@@ -308,6 +318,7 @@ document.addEventListener("DOMContentLoaded", () => {
     lowPriceCards.innerHTML += product(
       productData[i].image,
       productData[i].title,
+      productData[i].description,
       productData[i].stars,
       productData[i].currentPrice,
       productData[i].oldPrice,
@@ -401,3 +412,8 @@ document.addEventListener("DOMContentLoaded", () => {
     );
   }
 });
+
+// To Product Page
+// document.querySelector("card").addEventListener("click", () => {
+//   alert(this.innerHTML);
+// });

@@ -3,13 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Trendora - Category</title>
+    <title>Trendora - Product</title>
     <!-- Css -->
-    <link rel="stylesheet" href="css/category.css" />
+    <link rel="stylesheet" href="css/product-overview.css" />
     <link rel="stylesheet" href="css/shared.css" />
     <!-- Js -->
-    <script src="js/category.js"></script>
-    <script src="js/shared.js"></script>
+    <script src="js/product-overview.js"></script>
     <!-- Font Awesome CDN -->
     <link
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
@@ -40,56 +39,60 @@
         <span class="nav-cart-count">0</span>
       </button>
     </nav>
-    <section>
-      <aside>
-        <h2 class="title">Filter</h2>
-        <div class="links link-1">
-          <!--  -->
-        </div>
-        <div class="links link-2">
-          <h2 class="title">Price</h2>
-          <div class="min-max">
-            <p>$ <span class="minSpan"></span></p>
-            <p>$ <span class="maxSpan"></span></p>
+
+    <div class="product-overview">
+      <div class="all-images">
+        <div class="all-side-images">
+          <div>
+            <img src="" alt="" />
+            <!-- <img src="Assets/Images/blue-jean-shorts.png" alt="" /> -->
           </div>
-          <div class="range-container">
-            <input type="range" class="priceRange minRange" />
-            <input type="range" class="priceRange maxRange" />
+          <div>
+            <img src="" alt="" />
+            <!-- <img src="Assets/Images/blue-jean-shorts.png" alt="" /> -->
           </div>
-        </div>
-        <div class="links link-3">
-          <h2 class="title">Color</h2>
-          <div class="colors">
-            <!--  -->
+          <div>
+            <img src="" alt="" />
+            <!-- <img src="Assets/Images/blue-jean-shorts.png" alt="" /> -->
           </div>
         </div>
-        <div class="links link-4">
-          <h2 class="title">Size</h2>
-          <div class="sizes">
-            <!--  -->
-          </div>
+        <div class="main-image">
+          <img src="" alt="" />
+          <!-- <img src="Assets/Images/blue-jean-shorts.png" alt="" /> -->
         </div>
-        <div class="links link-5">
-          <h2 class="title">Dress Style</h2>
-          <!--  -->
-        </div>
-        <button class="apply btn-1">Apply</button>
-      </aside>
-      <main>
-        <!--  -->
-      </main>
-    </section>
-    <!-- Contact -->
-    <section class="contact">
-      <h1>star up to date about our latest offers</h1>
-      <div>
-        <div class="input">
-          <i class="fa-regular fa-envelope"></i>
-          <input type="text" placeholder="Enter you email address" />
-        </div>
-        <button class="btn-2">Subscribe to Newsletter</button>
       </div>
-    </section>
+      <div class="right-side">
+        <h1 class="title">
+          <!-- blue jean short -->
+        </h1>
+        <p class="descreption">
+          <!-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quisquam
+          sunt, non rem magnam numquam enim ducimus eligendi autem? Placeat? -->
+        </p>
+        <div class="product-colors">
+          <div class="product-link colors">colors :</div>
+          <div class="colors"></div>
+          <!--  -->
+        </div>
+        <div class="product-sizes">
+          <div class="product-link sizes">sizes :</div>
+          <!--  -->
+        </div>
+        <div class="order-controls">
+          <div class="quentity-selector">
+            <button class="add">
+              <i class="fa-solid fa-plus"></i>
+            </button>
+            <span class="product-quantity">0</span>
+            <button class="remove">
+              <i class="fa-solid fa-minus"></i>
+            </button>
+          </div>
+          <button class="buy-btn btn-1">Add to Cart</button>
+        </div>
+      </div>
+    </div>
+
     <!-- Footer -->
     <footer>
       <div class="text">

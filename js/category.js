@@ -34,21 +34,32 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Create a button for each unique color
+  var ResetColorRadio = document.createElement("input");
+  ResetColorRadio.classList.add("reset");
   [...new Set(colorsAr)].forEach((color) => {
+    ResetColorRadio.type = "radio";
+    ResetColorRadio.title = "Reset";
     var singleColorRadio = document.createElement("input");
     singleColorRadio.type = "radio";
+    singleColorRadio.name = "color";
+    singleColorRadio.title = color;
     singleColorRadio.style.setProperty("background-color", color);
     colorsLinks.appendChild(singleColorRadio);
   });
+  colorsLinks.appendChild(ResetColorRadio);
 
   // Create a button for each unique size
+  var resetSizeLinkButton = document.createElement("button");
+  resetSizeLinkButton.classList.add("reset");
   [...new Set(sizesAr)].forEach((size) => {
     var singleSizeLinkButton = document.createElement("button");
     singleSizeLinkButton.textContent = size;
     sizeLinks.appendChild(singleSizeLinkButton);
   });
+  sizeLinks.appendChild(resetSizeLinkButton);
 
   // Create a button for each unique dressStyle
+
   [...new Set(dressStyleAr)].forEach((dressStyle) => {
     var singledressStyleLinkButton = document.createElement("button");
     singledressStyleLinkButton.textContent = dressStyle;
@@ -88,37 +99,38 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log([...new Set(pricesAr)]);
 
   // Add Products
-  function product(image, title, stars, currentPrice, oldPrice, discount) {
-    return `
-        <a href="">
-          <div class="card">
-            <div class="card-image">
-              <img src="Assets/Images/${image}" alt="" />
-            </div>
-            <h4>${title}</h4>
-            <div class="card-reviews-stars">
-              <div class="card-stars">
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star"></i>
-                <i class="fa-solid fa-star-half-stroke"></i>
-              </div>
-              <p><span class="card-point">${stars}</span>/5</p>
-            </div>
-            <div class="price-container">
-              <h2 class="current-price">$<span>${currentPrice}</span></h2>
-              <h2 class="old-price">$<span>${oldPrice}</span></h2>
-              <h2 class="discount">-<span>${discount}</span>%</h2>
-            </div>
-          </div>
-          </a>`;
-  }
+  // function product(image, title, stars, currentPrice, oldPrice, discount) {
+  //   return `
+  //       <a>
+  //         <div class="card">
+  //           <div class="card-image">
+  //             <img src="Assets/Images/${image}" alt="" />
+  //           </div>
+  //           <h4>${title}</h4>
+  //           <div class="card-reviews-stars">
+  //             <div class="card-stars">
+  //               <i class="fa-solid fa-star"></i>
+  //               <i class="fa-solid fa-star"></i>
+  //               <i class="fa-solid fa-star"></i>
+  //               <i class="fa-solid fa-star"></i>
+  //               <i class="fa-solid fa-star-half-stroke"></i>
+  //             </div>
+  //             <p><span class="card-point">${stars}</span>/5</p>
+  //           </div>
+  //           <div class="price-container">
+  //             <h2 class="current-price">$<span>${currentPrice}</span></h2>
+  //             <h2 class="old-price">$<span>${oldPrice}</span></h2>
+  //             <h2 class="discount">-<span>${discount}</span>%</h2>
+  //           </div>
+  //         </div>
+  //         </a>`;
+  // }
   var main = document.querySelector("main");
   for (let i = 0; i < retrievedData.length; i++) {
     main.innerHTML += product(
       retrievedData[i].image,
       retrievedData[i].title,
+      retrievedData[i].description,
       retrievedData[i].stars,
       retrievedData[i].currentPrice,
       retrievedData[i].oldPrice,
@@ -144,7 +156,7 @@ document.addEventListener("DOMContentLoaded", () => {
     const selectedDressStyle =
       document.querySelector(".link-5 .active")?.textContent;
     const minPrice = minRange.value;
-    const maxPrice = maxRange.value;
+    const maxPrice = -maxRange.value;
 
     // Filter based on selected filters
     if (selectedType) {
@@ -177,6 +189,7 @@ document.addEventListener("DOMContentLoaded", () => {
       main.innerHTML += product(
         filteredData[i].image,
         filteredData[i].title,
+        filteredData[i].description,
         filteredData[i].stars,
         filteredData[i].currentPrice,
         filteredData[i].oldPrice,

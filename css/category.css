@@ -83,7 +83,26 @@ section aside .link-3 .colors input {
   cursor: pointer;
   position: relative;
   overflow: hidden;
+  border: 1px solid var(--input-bg);
+  box-shadow: 0 2px 5px var(--input-bg);
 }
+section aside .links input.reset,
+section aside .links button.reset {
+  position: relative;
+}
+section aside .links input.reset::before,
+section aside .links button.reset::before {
+  content: "\f00d";
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+  font-size: 0.8rem;
+
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 section aside .link-3 .colors input:checked::before {
   content: "";
   background-color: transparent;
@@ -125,15 +144,14 @@ section aside .link-2 .range-container input::-webkit-slider-thumb {
 section aside .link-2 .range-container {
   display: flex;
 }
+section aside .apply {
+  margin-top: 40px;
+  padding-block: 8px;
+  font-size: 12px;
+}
 
 section main {
   display: flex;
   flex-wrap: wrap;
   width: calc(100% - 20%);
-}
-
-section aside .apply {
-  margin-top: 40px;
-  padding-block: 8px;
-  font-size: 12px;
 }
