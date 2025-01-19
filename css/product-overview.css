@@ -1,9 +1,17 @@
 .product-overview {
   display: flex;
-  justify-content: center;
+  justify-content: space-evenly;
+
+  /* background-color: red; */
+  padding-block: 50px;
+  width: 100%;
 }
 .product-overview .right-side {
   width: 40%;
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+  gap: 20px;
 }
 .product-overview .right-side .order-controls {
   background-color: var(--input-bg);
@@ -20,6 +28,7 @@
 .product-overview .right-side .order-controls .quentity-selector button {
   border-radius: 100%;
   width: 40px;
+  font-size: 0.7rem;
   height: 40px;
 }
 .product-overview .right-side .order-controls .quentity-selector span {
@@ -30,14 +39,30 @@
 }
 .product-overview .right-side .product-colors .colors {
   display: flex;
+  gap: 8px;
 }
 .product-overview .right-side .product-colors .colors input {
   appearance: none;
-  /* background-color: red; */
+  border-radius: 100%;
+  width: 23px;
+  height: 23px;
+  cursor: pointer;
+  border: solid lightgray 1px;
+}
+.product-overview .right-side .product-sizes .sizes {
+  display: flex;
+  gap: 10px;
+}
+.product-overview .right-side .product-sizes .sizes button {
+  background-color: var(--input-bg);
+  width: 35px;
+  height: 35px;
+  border-radius: 100px;
 }
 
 .product-overview .all-images {
   display: flex;
+  gap: 10px;
 }
 .product-overview .all-images .all-side-images {
   display: flex;
@@ -45,9 +70,7 @@
   justify-content: space-between;
 }
 .product-overview .all-images .all-side-images div {
-  background-color: red;
   border-radius: 10px;
-  padding: 5px;
   width: 150px;
   height: 150px;
   overflow: hidden;
@@ -58,16 +81,17 @@
   object-fit: cover;
 }
 .product-overview .all-images .main-image {
-  background-color: green;
   border-radius: 10px;
-  padding: 5px;
   width: 500px;
   height: 500px;
   display: flex;
   align-items: center;
+  overflow: hidden;
 }
 .product-overview .all-images .main-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
 }
+
+/*  */

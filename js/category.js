@@ -98,33 +98,6 @@ document.addEventListener("DOMContentLoaded", () => {
   console.log([...new Set(dressStyleAr)]);
   console.log([...new Set(pricesAr)]);
 
-  // Add Products
-  // function product(image, title, stars, currentPrice, oldPrice, discount) {
-  //   return `
-  //       <a>
-  //         <div class="card">
-  //           <div class="card-image">
-  //             <img src="Assets/Images/${image}" alt="" />
-  //           </div>
-  //           <h4>${title}</h4>
-  //           <div class="card-reviews-stars">
-  //             <div class="card-stars">
-  //               <i class="fa-solid fa-star"></i>
-  //               <i class="fa-solid fa-star"></i>
-  //               <i class="fa-solid fa-star"></i>
-  //               <i class="fa-solid fa-star"></i>
-  //               <i class="fa-solid fa-star-half-stroke"></i>
-  //             </div>
-  //             <p><span class="card-point">${stars}</span>/5</p>
-  //           </div>
-  //           <div class="price-container">
-  //             <h2 class="current-price">$<span>${currentPrice}</span></h2>
-  //             <h2 class="old-price">$<span>${oldPrice}</span></h2>
-  //             <h2 class="discount">-<span>${discount}</span>%</h2>
-  //           </div>
-  //         </div>
-  //         </a>`;
-  // }
   var main = document.querySelector("main");
   for (let i = 0; i < retrievedData.length; i++) {
     main.innerHTML += product(
@@ -148,15 +121,15 @@ document.addEventListener("DOMContentLoaded", () => {
   function apply() {
     let filteredData = retrievedData;
 
-    // Get selected filters
     const selectedType = document.querySelector(".link-1 .active")?.textContent;
-    const selectedColor = document.querySelector(".link-3 input:checked")?.style
-      .backgroundColor;
+    const selectedColor = document.querySelector(
+      ".link-3 input:checked"
+    )?.title;
     const selectedSize = document.querySelector(".link-4 .active")?.textContent;
     const selectedDressStyle =
       document.querySelector(".link-5 .active")?.textContent;
     const minPrice = minRange.value;
-    const maxPrice = -maxRange.value;
+    const maxPrice = maxRange.value;
 
     // Filter based on selected filters
     if (selectedType) {
@@ -164,7 +137,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
     if (selectedColor) {
       filteredData = filteredData.filter(
-        (item) => item.color === selectedColor
+        (item) => item.color.toLowerCase() === selectedColor.toLowerCase()
       );
     }
     if (selectedSize) {
@@ -185,17 +158,18 @@ document.addEventListener("DOMContentLoaded", () => {
     main.innerHTML = "";
 
     // Display filtered products
-    for (let i = 0; i < filteredData.length; i++) {
+    filteredData.forEach((item) => {
       main.innerHTML += product(
-        filteredData[i].image,
-        filteredData[i].title,
-        filteredData[i].description,
-        filteredData[i].stars,
-        filteredData[i].currentPrice,
-        filteredData[i].oldPrice,
-        filteredData[i].discount
+        item.image,
+        item.title,
+        item.description,
+        item.stars,
+        item.currentPrice,
+        item.oldPrice,
+        item.discount
       );
-    }
+    });
   }
+
   document.querySelector(".apply").addEventListener("click", apply);
 });
