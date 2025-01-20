@@ -10,17 +10,18 @@ html {
 /* Integral */
 @font-face {
   font-family: integral-Medium;
-  src: url(./Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf);
+  src: url(/Assets/Fonts/Integral/Fontspring-DEMO-integralcf-medium.otf)
+    format("woff2");
 }
 /* Satoshi */
 
 @font-face {
   font-family: Satoshi-Medium;
-  src: url(./Assets/Fonts/Satoshi/Satoshi-Medium.otf);
+  src: url(/Assets/Fonts/Satoshi/Satoshi-Medium.otf) format("woff2");
 }
 @font-face {
   font-family: Satoshi-Light;
-  src: url(./Assets/Fonts/Satoshi/Satoshi-Light.otf);
+  src: url(/Assets/Fonts/Satoshi/Satoshi-Light.otf) format("woff2");
 }
 :root {
   --black-color: #000000;
