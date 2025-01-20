@@ -58,7 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Control Quantity
-  let Quantity = 0;
+  let Quantity = 1;
   function add1(target) {
     Quantity++;
 
@@ -68,8 +68,8 @@ document.addEventListener("DOMContentLoaded", () => {
   function remove1(target) {
     Quantity--;
 
-    if (Quantity <= 0) {
-      Quantity = 0;
+    if (Quantity <= 1) {
+      Quantity = 1;
     }
     var productQuantity = target.nextElementSibling;
     productQuantity.textContent = Quantity;
@@ -99,7 +99,6 @@ document.addEventListener("DOMContentLoaded", () => {
       oldPrice: JSON.parse(localStorage.getItem("Clicked Card"))[0]
         .oldPriceTargeted,
       quantity: Quantity,
-      // color: JSON.parse(localStorage.getItem("Clicked Card"))[0].color,
     };
 
     console.log(JSON.parse(localStorage.getItem("Clicked Card")));
@@ -112,7 +111,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 
     alert("The product has been added!");
-    window.location.href = "index.html";
+    window.location.href = "your-cart.html";
   }
   document.querySelector(".buy-btn").addEventListener("click", function () {
     addToCart(this);

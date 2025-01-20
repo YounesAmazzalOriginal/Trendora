@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
   productCheckedData.forEach((element) => {
     cartItems.innerHTML += `<div class="single-item">
-        <button class="delete-from-cart">
+        <button class="delete-from-cart" onclick="deleteProduct(this)">
           <i class="fa-solid fa-trash-can"></i>
         </button>
         <div class="img-container">
@@ -30,15 +30,45 @@ document.addEventListener("DOMContentLoaded", () => {
         </div>
       </div>`;
 
-    checkedTotalPrice.push(parseFloat(element.currentPrice));
-    productCheckedQuantity.push(parseFloat(element.quantity));
+    let itemTotalPrice =
+      parseFloat(element.currentPrice) * parseInt(element.quantity, 10);
+    checkedTotalPrice.push(itemTotalPrice);
+
+    productCheckedQuantity.push(parseInt(element.quantity, 10));
   });
 
-  let singleTotalQuantity = productCheckedQuantity.reduce((a, b) => a + b);
-  totalPrice.textContent = `$ ${
-    checkedTotalPrice.reduce((a, b) => a + b) * singleTotalQuantity
-  }`;
+  let singleTotalQuantity = productCheckedQuantity.reduce((a, b) => a + b, 0);
+  let grandTotalPrice = checkedTotalPrice.reduce((a, b) => a + b, 0);
+
+  totalPrice.textContent = `$ ${grandTotalPrice.toFixed(2)}`;
   totalQuantity.textContent = singleTotalQuantity;
 
   localStorage.setItem("notifivation count", productCheckedData.length);
 });
+
+// Delete
+function deleteProduct(target) {
+  var targetedSingleItem = target.closest(".single-item");
+
+  var productTitle = targetedSingleItem.querySelector("h5").textContent;
+
+  let productCheckedData = JSON.parse(
+    localStorage.getItem("product Checked List")
+  );
+
+  for (let i = 0; i < productCheckedData.length; i++) {
+    if (productCheckedData[i].title === productTitle) {
+      productCheckedData.splice(i, 1);
+      break;
+    }
+  }
+
+  localStorage.setItem(
+    "product Checked List",
+    JSON.stringify(productCheckedData)
+  );
+
+  targetedSingleItem.remove();
+
+  window.location.reload();
+}

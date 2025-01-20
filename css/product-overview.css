@@ -95,3 +95,43 @@
 }
 
 /*  */
+/* Phone & Mini Tablet */
+@media (min-width: 480px) and (max-width: 768px) {
+  .product-overview {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-overview .right-side {
+    width: 80%;
+  }
+}
+/* Styles for Phones */
+@media (max-width: 479px) {
+  .product-overview {
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: center;
+  }
+  .product-overview .all-images {
+    flex-direction: column-reverse;
+    align-items: center;
+    width: 85%;
+  }
+  .product-overview .all-images .main-image {
+    width: 100%;
+    height: 400px;
+  }
+  .product-overview .all-images .all-side-images {
+    flex-direction: row;
+    width: 100%;
+    justify-content: center;
+    gap: 10px;
+  }
+  .product-overview .all-images .all-side-images div {
+    width: 120px;
+    height: 120px;
+  }
+  .product-overview .right-side {
+    width: 80%;
+  }
+}

@@ -17,11 +17,13 @@ function product(
               <p class="descreption">${descreption}</p>
               <div class="card-reviews-stars">
                 <div class="card-stars">
+                  <!--
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star"></i>
                   <i class="fa-solid fa-star-half-stroke"></i>
+                  -->
                 </div>
                 <p><span class="card-point">${stars}</span>/5</p>
               </div>
@@ -53,7 +55,6 @@ function card(target) {
     imgTargeted: imgTargeted,
     titleTargeted: titleTargeted,
     descreptionTargeted: descreptionTargeted,
-    // color: "color",
   });
 
   localStorage.setItem("Clicked Card", JSON.stringify(cardClicked));
