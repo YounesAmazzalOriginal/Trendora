@@ -7,6 +7,9 @@ html {
   box-sizing: border-box;
   font-family: var(--font-sat-L);
 }
+<<<<<<< HEAD
+
+=======
 /* Integral */
 @font-face {
   font-family: "integral-Medium";
@@ -22,6 +25,7 @@ html {
   font-family: "Satoshi-Light";
   src: url("./Assets/Fonts/Satoshi/Satoshi-Light.otf");
 }
+>>>>>>> 1e4bb742f2627d26fcd06865cc682256f5d484cd
 :root {
   --black-color: #000000;
   --white-color: #fff;
@@ -31,9 +35,9 @@ html {
   --product-bg: #f0eeed;
   --gray: gray;
 
-  --font-int-M: integral-Medium;
-  --font-sat-M: Satoshi-Medium;
-  --font-sat-L: Satoshi-Light;
+  --font-int-M: "Integral CF Regular";
+  --font-sat-M: "Satoshi", sans-serif;
+  --font-sat-L: "Satoshi", sans-serif;
 
   --section-padd: 0px 120px;
 }
@@ -42,8 +46,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-
-  margin-bottom: 60px;
 }
 a {
   text-decoration: none;
@@ -141,7 +143,7 @@ nav ul li:not(.nav-search)::before {
   left: 0px;
   width: 0%;
   height: 1px;
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.589);
   transition: width 0.4s;
 }
 nav ul li:not(.nav-search):hover::before {
@@ -153,6 +155,7 @@ nav ul li:not(.nav-search).active::before {
 nav ul li a {
   text-transform: capitalize;
   font-size: 0.9rem;
+  color: rgba(0, 0, 0, 0.589);
 }
 nav ul .nav-search {
   background-color: var(--input-bg);
@@ -302,6 +305,11 @@ footer ul h2 {
 footer ul li {
   text-transform: capitalize;
   font-size: 0.9rem;
+  white-space: nowrap;
+}
+footer ul li a {
+  color: rgba(0, 0, 0, 0.63);
+  /* font-weight: 100; */
 }
 
 /* Copyright */
@@ -405,7 +413,9 @@ footer ul li {
 #hidden {
   display: none;
 }
-
+section .filter-btn {
+  display: none;
+}
 /* Phone & Mini Tablet */
 @media (max-width: 768px) {
   nav {
@@ -460,6 +470,19 @@ footer ul li {
   /* Elements At All Without Desktop  */
   section aside button.close-aside {
     display: flex;
+  }
+  section .filter-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--input-bg);
+    border-radius: 100%;
+    width: 32px;
+    height: 32px;
+    position: fixed;
+    left: 10px;
+    top: 10%;
+    z-index: 70;
   }
 }
 @media (max-width: 479px) {
