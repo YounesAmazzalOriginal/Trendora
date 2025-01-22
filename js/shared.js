@@ -65,3 +65,16 @@ document.addEventListener("DOMContentLoaded", () => {
 
   navCart.textContent = localStorage.getItem("notifivation count") || 0;
 });
+
+// Hide mobile nav if scroll bottom
+//
+// 768
+//
+window.addEventListener("scroll", () => {
+  var navUl = document.querySelector("nav ul");
+  if (window.innerHeight + window.scrollY >= document.body.offsetHeight) {
+    navUl.style.setProperty("display", "none");
+  } else {
+    navUl.style.removeProperty("display");
+  }
+});
